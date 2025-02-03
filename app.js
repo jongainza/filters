@@ -42,7 +42,7 @@ displayButtons(products);
 form.addEventListener("keyup", () => {
   let input = searchInput.value.toLowerCase();
   let displayProducts = products.filter(({ title }) => {
-    return title.toLocaleLowerCase().includes(input);
+    return title.toLowerCase().includes(input);
   });
   if (displayProducts.length <= 0) {
     productsContainer.innerHTML = `<h6>No matches for <span class='red'>"${input}"</span></h6>`;
